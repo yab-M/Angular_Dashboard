@@ -1,0 +1,64 @@
+.header {
+    height: 70px;
+    padding: 15px 40px;
+    background-color: #003b5c; // Dark blue inspired by Angular's logo
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); // Soft shadow for a modern look
+    border-bottom: 3px solid #dd0031; // Angular red accent at the bottom
+    .logo {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: 22px;
+        color: #ffffff;
+        // Adding logo icon before the text
+        &::before {
+            content: '⚡'; // Example of a logo icon (you can use a different one)
+            font-size: 28px;
+            margin-right: 10px;
+            color: #dd0031; // Red from the Angular palette
+        }
+        @media (max-width: 768px) {
+            font-size: 18px; // Responsive font size for smaller screens
+        }
+    }
+    .user {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        color: #ffffff;
+        .user-name {
+            font-size: 18px;
+            margin-right: 15px;
+            @media (max-width: 768px) {
+                font-size: 16px; // Responsive font size
+            }
+        }
+        .user-image {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 2px solid #ffffff; // White border for the profile picture
+            background-color: #dd0031; // Red background, matching Angular logo
+            color: #ffffff; // White initials
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; // Adding smooth hover effects
+            &:hover {
+                transform: scale(1.05); // Slight zoom effect on hover
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); // Shadow for a raised effect
+            }
+            @media (max-width: 768px) {
+                width: 40px;
+                height: 40px; // Responsive sizing for smaller screens
+            }
+        }
+    }
+}
